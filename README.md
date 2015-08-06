@@ -28,7 +28,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+require "eraser"
+
+Eraser.erase("\uFEFF") # => " "
+Eraser.erase("\u2029") # => "\n"
+
+Eraser::LineTerminators.erase("\u2029", "P") # => "P"
+Eraser::SpaceSeparators.erase("\uFEFF", "S") # => "S"
+```
 
 ## Development
 
