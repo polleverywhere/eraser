@@ -31,6 +31,9 @@ Or install it yourself as:
 ```
 require "eraser"
 
+JohnKruger.erase("\uFEFF") # => " "
+JohnKruger.erase("\u2029") # => "\n"
+
 Eraser.erase("\uFEFF") # => " "
 Eraser.erase("\u2029") # => "\n"
 

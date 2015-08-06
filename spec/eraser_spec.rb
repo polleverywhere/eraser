@@ -7,7 +7,7 @@ describe Eraser do
 
   it "erases both space separators and line terminators" do
     value = "\u2001\u2000\u2028\r\n"
-    erased = Eraser.erase value
+    erased = JohnKruger.erase value
     expect(erased).to eq("  \n\n")
   end
 
@@ -18,7 +18,7 @@ describe Eraser do
         "\u2003", "\u2004", "\u2005", "\u2006", "\u2007", "\u2008",
         "\u2009", "\u200A", "\u202F", "\u205F", "\u3000", "\u0009"]
 
-      erased = Eraser::SpaceSeparators.erase spaces.join("")
+      erased = JohnKruger::SpaceSeparators.erase spaces.join("")
       expect(erased).to eq(" " * erased.length)
     end
   end

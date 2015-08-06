@@ -9,3 +9,5 @@ module Eraser
     v
   end
 end
+
+JohnKruger = Eraser
